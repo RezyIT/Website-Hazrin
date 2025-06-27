@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Website - Muhammad Danish Hazrin Bin Abdul Rahim</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Merriweather:wght@400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="home.css" />
+  <link rel="stylesheet" href="education.css">
+</head>
+<body>
+
+  <nav class="navbar">
+        <div class="nav-container">
+              <a href="../student.html/student.html" class="logo">AR-WEB</a>
+              <ul class="nav-menu">
+                   <li><a href="../home.html/index.html" class="nav-link"> Home</a></li>
+                <li><a href="../profile.html/profile.html" class="nav-link">Profile</a></li>
+                <li><a href="../education.html/education.html" class="nav-link active"> Education</a></li>
+                <li><a href="../portfolio.html/portfolio.html" class="nav-link">Portfolio</a></li>
+                <li><a href="../contact.html/contact.html" class="nav-link">Contact</a></li>
+                 </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+    <div class="nav-logo">
+                <a href="../student.html/student.html">
+                </a>
+            </div>
+
+  <section class="education-section">
+    <div class="education-container">
+      <h2 class="education-title">My Education Journey</h2>
+      <p class="education-subtitle">Explore my academic background from school to university</p>
+
+      <div class="edu-grid">
+
+        <div class="edu-card">
+          <img src="Sekolah_Menengah_Kebangsaan_Seri_Tasik.jpg" alt="SMK Seri Tasik" class="edu-logo" />
+          <div class="edu-level">Secondary School</div>
+          <div class="edu-name">SMK Seri Tasik, Kuala Lumpur</div>
+          <div class="edu-year">2017 - 2021</div>
+          <p class="edu-desc">Completed SPM with active participation in sports and curricular activities including handball and athletics.</p>
+        </div>
+
+
+        <div class="edu-card">
+          <img src="pic kte pudu jaya.jpeg" alt="STPM Logo" class="edu-logo" />
+          <div class="edu-level">STPM</div>
+          <div class="edu-name">Kolej Tingkatan 6</div>
+          <div class="edu-year">2022 - 2023</div>
+          <p class="edu-desc">Focused on arts stream with core subjects like MUET, Pengajian Am, Economy, Sports Science & Bahasa Melayu.</p>
+        </div>
+
+
+        <div class="edu-card">
+          <img src="pic pundana.jpeg" alt="UiTM Logo" class="edu-logo" />
+          <div class="edu-level">Bachelor's Degree</div>
+          <div class="edu-name">UiTM Puncak Perdana</div>
+          <div class="edu-year">2024 - Present</div>
+          <p class="edu-desc">Pursuing Bachelor of Information Science (Hons) Information Content Management. It is a comprehensive academic program that focuses on the organization, management, and delivery of digital content and information assets. Offered under the Faculty of Information Management at UiTM, this degree equips students with the skills to manage content across platforms, especially in digital and web-based environments.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <footer class="footer">
+    <div class="footer-content">
+      <p class="copyright">
+        &copy; 2025 DanishWork. All rights reserved. | Designed with passion for digital excellence.
+      </p>
+    </div>
+  </footer>
+
+  <script>
+ 
+    const hamburger = document.querySelector('.hamburger');
+    const navMenu = document.querySelector('.nav-menu');
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      navMenu.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>

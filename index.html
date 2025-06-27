@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website - Muhammad Danish Hazrin Bin Abdul Rahim</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Merriweather:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+              <a href="../student.html/student.html" class="logo">AR-WEB</a>
+              <ul class="nav-menu">
+                <li><a href="../home.html/index.html" class="nav-link active"> Home</a></li>
+                <li><a href="../profile.html/profile.html" class="nav-link">Profile</a></li>
+                <li><a href="../education.html/education.html" class="nav-link"> Education</a></li>
+                <li><a href="../portfolio.html/portfolio.html" class="nav-link">Portfolio</a></li>
+                <li><a href="../contact.html/contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+    <div class="nav-logo">
+                <a href="../student.html/student.html">
+                </a>
+            </div>
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">Hello, I'm Muhammad Danish Hazrin Bin Abdul Rahim</h1>
+                <h2 class="hero-subtitle">Student of Information Science</h2>
+                <p class="hero-description">
+                    Hi, you may call me Danish. Welcome to my personal space where I share my journey through education, portfolio, and personal interests. 
+                    I'm passionate about digital innovation and creating meaningful connections through technology. 
+                </p>
+                <div class="hero-buttons">
+                    <a href="../profile.html/profile.html" class="btn btn-primary">
+                        <i class="fas fa-user"></i>
+                        Get to Know Me
+                    </a>
+                    <a href="../contact.html/contact.html" class="btn btn-secondary">
+                        <i class="fas fa-envelope"></i>
+                        Let's Connect
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="image/2S4A5738-photoaidcom-cropped.JPG"
+                     alt="Danish Profile Photo" 
+                     class="profile-image"
+                     loading="lazy">
+            </div>
+        </div>
+    </section>
+    <section class="intro-section">
+        <div class="intro-container">
+            <h2 class="section-title">About This Website</h2>
+            <p class="section-subtitle">Your Gateway to My Professional Journey</p>
+            <p class="intro-text">
+                This website serves as a comprehensive showcase of my educational background, professional experience, 
+                and personal interests. Whether you're a potential employer, academic advisor, fellow student, or 
+                professional connection, you'll find detailed information about my journey, achievements, and aspirations. 
+                Each section has been carefully crafted to provide insights into different aspects of my life and career development.
+            </p>
+        </div>
+    </section>
+    <section class="stats-section">
+        <div class="stats-container">
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <h3 class="stat-title">Education Journey</h3>
+                <p class="stat-description">From secondary school through university, tracking my academic progress and achievements</p>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <i class="fas fa-briefcase"></i>
+                </div>
+                <h3 class="stat-title">Portfolio</h3>
+                <p class="stat-description">Project and Achievements through my journey.</p>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <i class="fas fa-heart"></i>
+                </div>
+                <h3 class="stat-title">Personal Interests</h3>
+                <p class="stat-description">Hobbies, passions, and activities that shape who I am beyond academics</p>
+            </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="footer-content">
+            <p class="copyright">
+                &copy; 2025 DanishWork. All rights reserved. | Designed with passion for digital excellence.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+        document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+        }));
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 100) {
+                navbar.style.background = 'rgba(18, 18, 18, 0.98)';
+                navbar.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.3)';
+            } else {
+                navbar.style.background = 'rgba(28, 28, 28, 0.95)';
+                navbar.style.boxShadow = 'none';
+            }
+        });
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+        document.querySelectorAll('.stat-card, .intro-container').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'all 0.6s ease';
+            observer.observe(el);
+        });
+        const profileImg = document.querySelector('.profile-image');
+        profileImg.addEventListener('load', () => {
+            profileImg.style.background = 'none';
+            profileImg.style.animation = 'none';
+        });
+        const heroTitle = document.querySelector('.hero-title');
+        const titleText = heroTitle.textContent;
+        heroTitle.textContent = '';
+        
+        let i = 0;
+        const typeSpeed = 100;
+        
+        setTimeout(() => {
+            const typeWriter = () => {
+                if (i < titleText.length) {
+                    heroTitle.textContent += titleText.charAt(i);
+                    i++;
+                    setTimeout(typeWriter, typeSpeed);
+                }
+            };
+            typeWriter();
+        }, 500);
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const floating1 = document.querySelector('.floating-1');
+            const floating2 = document.querySelector('.floating-2');
+            
+            floating1.style.transform = `translateY(${scrolled * 0.3}px)`;
+            floating2.style.transform = `translateY(${scrolled * -0.2}px)`;
+        });
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('mouseenter', () => {
+                link.style.transform = 'translateY(-2px)';
+            });
+            
+            link.addEventListener('mouseleave', () => {
+                link.style.transform = 'translateY(0)';
+            });
+        });
+        const preloadImages = [
+            'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face'
+        ];
+
+        preloadImages.forEach(src => {
+            const img = new Image();
+            img.src = src;
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website - Muhammad Danish Hazrin Bin Abdul Rahim</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Merriweather:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+              <a href="../student.html/student.html" class="logo">AR-WEB</a>
+              <ul class="nav-menu">
+                  <li><a href="../home.html/index.html" class="nav-link"> Home</a></li>
+                <li><a href="../profile.html/profile.html" class="nav-link active">Profile</a></li>
+                <li><a href="../education.html/education.html" class="nav-link"> Education</a></li>
+                <li><a href="../portfolio.html/portfolio.html" class="nav-link">Portfolio</a></li>
+                <li><a href="../contact.html/contact.html" class="nav-link">Contact</a></li>    
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+    <div class="nav-logo">
+                <a href="student.html">
+                </a>
+            </div>
+    <main class="main-content">
+        <section class="profile-hero">
+            <div class="profile-hero-container">
+                <div class="profile-image-section">
+                    <img src="2S4A5738-photoaidcom-cropped.JPG" 
+                    alt="Danish Hazrin Profile Photo" 
+                    class="profile-image" 
+                    loading="lazy">
+                </div>
+                <div class="profile-content">
+                    <h1 class="profile-name">Danish Hazrin</h1>
+                    <h2 class="profile-title">Student of Information Science</h2>
+                    <p class="profile-description">
+                        Welcome to my personal profile! I'm Muhammad Danish Hazrin Bin Abdul Rahim, a passionate student dedicated to excellence in Information Science. This comprehensive profile showcases my educational journey, professional development, and personal interests that shape who I am as both a student and aspiring professional.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="about-section">
+            <div class="about-container">
+                <h2 class="section-title">About Me</h2>
+                <p class="section-subtitle">Getting to Know the Person Behind the Profile</p>
+                <p class="about-text">
+                    I am a dedicated Information Science student with a strong commitment to personal and professional growth. My academic journey has been shaped by curiosity, determination, and a genuine passion for technology and digital innovation. Through my studies, I've developed both technical competencies and essential soft skills that prepare me for the challenges ahead.
+                </p>
+                <p class="about-text">
+                    Beyond academics, I believe in maintaining a well-rounded lifestyle that balances educational pursuits with personal interests and meaningful relationships. This holistic approach to development has helped me grow not just as a student, but as an individual ready to contribute positively to any team or organization I join.
+                </p>
+            </div>
+        </section>
+        <section class="highlights-section">
+            <div class="highlights-container">
+                <div class="highlight-card">
+                    <div class="highlight-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="highlight-title">Academic Excellence</h3>
+                    <p class="highlight-description">Committed to maintaining high academic standards while pursuing comprehensive knowledge in Information Science and related fields.</p>
+                </div>
+                <div class="highlight-card">
+                    <div class="highlight-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3 class="highlight-title">Innovation Mindset</h3>
+                    <p class="highlight-description">Passionate about digital innovation and exploring new technologies that can create meaningful impact in our connected world.</p>
+                </div>
+                <div class="highlight-card">
+                    <div class="highlight-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="highlight-title">Collaborative Spirit</h3>
+                    <p class="highlight-description">Strong believer in teamwork and building meaningful professional relationships that foster mutual growth and success.</p>
+                </div>
+                <div class="highlight-card">
+                    <div class="highlight-icon">
+                        <i class="fa-solid fa-bullseye"></i>
+                    </div>
+                    <h3 class="highlight-title">Goal-Oriented</h3>
+                    <p class="highlight-description">Focused on continuous improvement and setting achievable yet challenging goals that drive personal and professional development.</p>
+                </div>
+                <div class="highlight-card">
+                    <div class="highlight-icon">
+                        <i class="fas fa-balance-scale"></i>
+                    </div>
+                    <h3 class="highlight-title">Well-Balanced</h3>
+                    <p class="highlight-description">Maintaining harmony between academic responsibilities, personal interests, and social connections for holistic growth.</p>
+                </div>
+                <div class="highlight-card">
+                    <div class="highlight-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3 class="highlight-title">Future-Ready</h3>
+                    <p class="highlight-description">Preparing for tomorrow's challenges by developing relevant skills and staying current with industry trends and developments.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer-content">
+            <p class="copyright">
+                &copy; 2025 DanishWork. All rights reserved. | Designed with passion for digital excellence.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+        }));
+
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 100) {
+                navbar.style.background = 'rgba(18, 18, 18, 0.98)';
+                navbar.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.3)';
+            } else {
+                navbar.style.background = 'rgba(28, 28, 28, 0.95)';
+                navbar.style.boxShadow = 'none';
+            }
+        });
+
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.highlight-card, .about-container').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'all 0.6s ease';
+            observer.observe(el);
+        });
+
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('mouseenter', () => {
+                link.style.transform = 'translateY(-2px)';
+            });
+            
+            link.addEventListener('mouseleave', () => {
+                link.style.transform = 'translateY(0)';
+            });
+        });
+        const profileImg = document.querySelector('.profile-image');
+        if (profileImg) {
+            profileImg.addEventListener('load', () => {
+                profileImg.style.background = 'none';
+                profileImg.style.animation = 'none';
+            });
+        }
+    </script>
+</body>
+</html>
