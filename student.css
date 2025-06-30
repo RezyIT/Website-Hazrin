@@ -27,6 +27,17 @@
   margin-top: 2rem;
 }
 
+.info-box a {
+    color: #E0E0E0;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.info-box a:hover {
+    color: #D4AF37;
+    text-decoration: underline;
+}
+
 .info-box {
   background: rgba(255, 255, 255, 0.03);
   padding: 1rem 1.5rem;
@@ -63,7 +74,7 @@ body {
   overflow-x: hidden;
 }
 
-navbar {
+.navbar {
   position: fixed;
   top: 0;
   width: 100%;
